@@ -4,45 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Code Quiz</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <nav class="navbar">
-        <a class="navbar-score" href="highscore.html">View Highscores</a> 
-        <span class="navbar-timer">Time: </span>
-    </nav>
-    <article class="container">
-        <section id="title">
-            <h1>Code Quiz</h1>
-            <p>Answer as many questions as possible within the time limit! Be warned, answering questions incorrectly will deduct 10 seconds from your timer. Your score will be your remaining time. Good luck!</p>
-            <button class="start-btn" id="quizStart">Start</button>
-        </section>
 
-        <section id="quizQuestions">
-            <h2 id="questionText"></h2>
-            <button class="answer-btn" id="ansOne"></button>
-            <button class="answer-btn" id="ansTwo"></button>
-            <button class="answer-btn" id="ansThree"></button>
-            <button class="answer-btn" id="ansFour"></button>
+    <div class="title">
+        <h1>Code Quiz</h1>
+        <h2>You have 75 seconds to answer the questions. Every wrong answer will deduct 10 seconds. Your final score is your remaining time. Good luck!</h2>
+    </div>
+
+    <article class="quizStart">
+        <button id="start-Btn">Start Quiz</button>
+        <button id="highscore-Btn">View Leaderboard</button>
+    </article>
+    <article class="scoreList">
+        <h2>High Scores</h2>
+        <section class="highScores">
+            Initials: <span id="playerInitials"> </span><span id="playerScore"> Score: </span>
         </section>
     </article>
-    <div id="ansResult"></div>
-
-    <section id="gameEnd">
-        <h2>Quiz Finished!</h2>
-        <p>Your final score is: </p>
-        <h3 id="finalScore"></h3>
-        <form id="submitName">
-            <div class="form">
-                <label for="userPrompt">Please enter your initials.</label>
-                <input type="text" class="form" id="userInitials" value="">
-            </div>
-            <button type="submit" class= "submit-btn" id="submitBtn">Submit</button>
-        </form>
-        <div class="user-alert" id="errorAlert" style="display: none;">Error: Please enter your initials!</div>
+    
+    <article class="scoreMenu">
+        <button id="clear-Btn">Clear all scores</button>
+        <button id="title-Btn">Back to title</button>
+    </article>
+  
+    <section class="quiz">
+        <nav class="timer">
+            <span id="timeRemaining">Time: </span>
+        </nav>
+       
+        <article class="quizQuestion">
+        </article>
+     
+        <section id="answer-choices">
+            <div class="choice" id="A" onclick="choose('A')"></div>
+            <div class="choice" id="B" onclick="choose('B')"></div>
+            <div class="choice" id="C" onclick="choose('C')"></div>
+            <div class="choice" id="D" onclick="choose('D')"></div>
+        </section>
     </section>
+
     <script src="script.js"></script>
-    <script src="questions.js"></script>
 </body>
 </html>

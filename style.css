@@ -1,122 +1,59 @@
 *{
-    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: white;
+    color: black;
+}
+
+body {
     padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-.navbar-score{
-    color: lightblue;
-    font-size: xx-large;
-}
-
-.navbar-timer{
-    position: absolute;
-    right: 150px;
-    width: 200px;
-    float: right;
-    font-size: xx-large;
-}
-
-.container{
-    position: fixed;
-    top:50%;
-    left:50%;
-    transform: translate(-50%, -50%);
-    font-size: x-large;
-}
-
-#title{
+h1 {
     text-align: center;
-    margin: auto;
 }
 
-#quizQuestions{
+
+button {
+    background-color: lightblue;
+    border: white 5px outset;
+    padding: 20px;
+    margin: auto;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.timer {
+    text-align: center;
+}
+
+.quiz {
     display: none;
-    text-align: center;
-    margin: auto;
-    position: relative;
+    max-width: 600px;
+    border: white 5px double;
 }
 
-#answer-btn{
-    background: lightblue;
-    border-color: lightblue;
+
+.timer {
+    border: white 5px solid;
 }
 
-#ansResult{
-    display:none;
-    position: fixed;
-    color:black;
-    font-style: italic;
-}
-
-#gameEnd{
+.scoreList {
     display: none;
-    margin: auto;
-    position: relative;
-    text-align: center;
 }
 
-#finalScore{
-    line-height: .5;
-    margin-bottom: 30px;
-    font-weight: bold;
+.scoreMenu {
+    display: none;
 }
 
-.submit-btn{
-    background: lightblue;
-    border-color: lightblue;
-}
-
-.start-btn{
-    background: lightblue;
-    border-color: lightblue;
-}
-
-.answerSlideUp {
-    animation-name: answer-slide-up;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-out;
-    animation-iteration-count: 1;
-    animation-duration: 0.30s;
-}
-
-.slideUp {
-    animation-name: slide-up;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-out;
-    animation-duration: 0.50s;
-}
-
-.slideDown {
-    animation-name: slide-down;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-out;
-    animation-duration: 0.70s;
-}
-
-.questionFadeOut {
-    animation-name: quiz-fade-out;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
-    animation-duration: 0.30s;
-}
-
-.questionFadeIn {
-    animation-name: quiz-fade-in;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
-    animation-duration: 0.30s;
-}
-
-.fadeInOut {
-    animation-name: fade-in-out;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
-    animation-duration: 1.00s;
-}
-
-.fadeAway {
-    animation-name: fade-away;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
-    animation-duration: 0.30s;
+.choice:hover {
+    color: blue;
+    cursor: pointer;
 }
