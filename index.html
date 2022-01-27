@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Code Quiz</title>
+</head>
+<body>
+    <nav class="navbar">
+        <a class="navbar-score" href="highscore.html">View Highscores</a> 
+        <span class="navbar-timer">Time: </span>
+    </nav>
+    <article class="container">
+        <section id="title">
+            <h1>Code Quiz</h1>
+            <p>Answer as many questions as possible within the time limit! Be warned, answering questions incorrectly will deduct 10 seconds from your timer. Your score will be your remaining time. Good luck!</p>
+            <button class="start-btn" id="quizStart">Start</button>
+        </section>
+
+        <section id="quizQuestions">
+            <h2 id="questionText"></h2>
+            <button class="answer-btn" id="ansOne"></button>
+            <button class="answer-btn" id="ansTwo"></button>
+            <button class="answer-btn" id="ansThree"></button>
+            <button class="answer-btn" id="ansFour"></button>
+        </section>
+    </article>
+    <div id="ansResult"></div>
+
+    <section id="gameEnd">
+        <h2>Quiz Finished!</h2>
+        <p>Your final score is: </p>
+        <h3 id="finalScore"></h3>
+        <form id="submitName">
+            <div class="form">
+                <label for="userPrompt">Please enter your initials.</label>
+                <input type="text" class="form" id="userInitials" value="">
+            </div>
+            <button type="submit" class= "submit-btn" id="submitBtn">Submit</button>
+        </form>
+        <div class="user-alert" id="errorAlert" style="display: none;">Error: Please enter your initials!</div>
+    </section>
+    <script src="script.js"></script>
+    <script src="questions.js"></script>
+</body>
+</html>
