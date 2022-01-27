@@ -29,5 +29,8 @@ WHEN the game is over
 THEN I can save my initials and my score
 ```
 
+## Link to Deployed Application
+[Link to Deployed Webpage](https://llting592.github.io/Code-Quiz/)
+
 ## Screenshot
-![]
+![Screenshot](https://github.com/llting592/Code-Quiz/blob/main/04-web-apis-homework-demo.gif)
